@@ -1,0 +1,130 @@
+<html>
+<head>
+    <title>Online Classifield</title>
+    <style>
+        ol {
+            list-style: none; 
+            counter-reset: item; /* Đặt lại bộ đếm */
+        }
+        ol > li {
+            counter-increment: item; /* Tăng bộ đếm */
+            font-weight: bold; 
+        }
+        ol > li::before {
+            content: counter(item) ") "; /* Hiển thị số thứ tự với dấu ")" */
+        }
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function performSearch(){
+            alert("Searching ...")
+        }
+        function openHelp(){
+            window.open("help.html","_blank");
+        }
+        function clearForm(){
+            document.getElementById("searchForm").reset();
+        }
+    </script>
+</head>
+<body bgcolor="#ccffff">
+    <h2 style="color:red;"> Online Classifields Search Form</h2>
+    <hr style="height:1px; background: brown;" />
+    <form id="searchForm">
+        <ol type="1">
+            <li>Search for a classified in the following sections:</li>
+                <p><table>
+                    <tr>
+                        <td>
+                            <input type="radio" name="classifields" id="employment">
+                            <label for="employment">Employment</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="classifields" id="personal">
+                            <label for="personal">Personal</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="classifields" id="forsale">
+                            <label for="forsale">For Sale</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="classifields" id="Miscellanecus">
+                            <label for="Miscellanecus">Miscellanecus</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="classifields" id="Housing">
+                            <label for="Housing">Housing</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="classifields" id="Alloftheabove">
+                            <label for="Alloftheabov">All of the above</label>
+                        </td>
+                    </tr>
+                </table></p>  
+            <li>Search the following public actions:</li>
+                <p><table>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="publications" id="Midwesttimes">
+                            <label for="Midwesttimes">Midwest times</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="publications" id="ModernNews">
+                            <label for="ModernNews">Modern News</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="publications" id="EmploymentToday">
+                            <label for="EmploymentToday">Employment Today</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="publications" id="GreatLakesClassifields">
+                            <label for="GreatLakesClassifields">Great Lakes Classifields</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="publications" id="MiddletonDaily">
+                            <label for="MiddletonDaily">Middleton Daily</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="publications" id="CashtownDailyNews">
+                            <label for="CashtownDailyNews">Cashtown Daily News</label>
+                        </td>
+                    </tr>
+                </table></p>
+            <p><li>
+                From to
+                <input type="date" name="date1" id="date1">
+                <span style="font-weight: normal;">to</span>
+                <input type="date" name="date2" id="date2">
+            </li></p>
+            <li>
+                Enter a few key keywords to describe the classified.
+                <p><input type="text" name="keywords" id="keywords" style="width: 500px; height: 22px;"></p>
+            </li>
+            <li>
+                Click one of the options below:
+                <p>
+                    <button onclick="performSearch()">
+                        <img src="hinh/Search.gif" alt="Search" />
+                    </button>
+                    <button onclick="openHelp()">
+                        <img src="hinh/Help.gif" alt="Help" />
+                    </button>
+                    <button onclick="clearForm()">
+                        <img src="hinh/Cancel.gif" alt="Cancel" />
+                    </button>
+                </p>
+            </li>
+        </ol>
+    </form>
+</body>
+</html>
