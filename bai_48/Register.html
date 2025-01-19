@@ -1,0 +1,166 @@
+<html>
+<head>
+    <title>Bai 48</title>
+    <script>
+        function register()
+        {
+            alert("Đăng ký thành công!");
+        }
+        function cancel()
+        {
+            //Lấy tất cả các input trong form và đặt về giá trị mặc định
+            document.querySelectorAll("input").forEach(input => {
+                if (input.type === "text") {
+                    input.value="";
+                } else if (input.type === "radio" || input.type === "checkbox") {
+                    input.checked = false;
+                }
+            });
+
+            // Đặt lại giá trị cho select nếu có
+            document.querySelectorAll("select").forEach(select => {
+                select.selectedIndex = 0;
+            });
+        }
+    </script>
+</head>
+<body bgcolor="#99ccff">
+    <p align="center"><img src="Jackson.gif" /></p>
+    <h2 align="center">Registration Form</h2>
+    <p align="center">Register your Jackson Electronics product here</p>
+    <table align="center">
+        <tr>
+            <td>First Name:</td>
+            <td>
+                <input type="text" name="firstname" id="firstname" style="width: 150px;">
+                Last Name: 
+                <input type="text" name="lastname" id="lastname" style="width: 150px;">
+            </td>            
+        </tr>
+        <tr>
+            <td>Address #1:</td>
+            <td>
+                <input type="text" name="address1" id="address1" style="width: 250px; ">
+            </td>
+        </tr>
+        <tr>
+            <td>Address #2:</td>
+            <td>
+                <input type="text" name="address2" id="address2" style="width: 250px;">
+            </td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td>
+                <input type="text" name="city" id="city">
+                State: <input type="text" name="state" id="state" style="width: 50px;">
+                Zip: <input type="text" name="zip" id="zip" style="width: 80px;">
+            </td>
+        </tr>
+        <tr>
+            <td>Country:</td>
+            <td>
+                <input type="text" id="country" name="country" value="United States">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr style="background: brown; height: 1px;"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Product:</td>
+            <td>
+                <select>
+                    <option>ScanMaster</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Date Purchased:</td>
+            <td><input type="text" name="datepurchased" id="datepurchased"></td>
+        </tr>
+        <tr>
+            <td>Serial #:</td>
+            <td><input type="text" name="serial" id="serial"></td>
+        </tr>
+        <tr style="vertical-align: top;">
+            <td>Used for:</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="radio" name="usage" id="home" value="Home">
+                            <label for="home">Home</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="usage" id="education" value="Educational Institution" >
+                            <label for="education">Educational Institution</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="usage" id="business" value="Business">
+                            <label for="business">Business</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="usage" id="other" value="Other">
+                            <label for="other">Other</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="usage" id="goverment" value="Goverment">
+                            <label for="goverment">Goverment</label>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr style="vertical-align: top;">
+            <td>System(check all that apply):</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="system" id="windows" value="Windows">
+                            <label for="windows">Windows</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="system" id="UNIX" value="UNIX" >
+                            <label for="UNIX">UNIX</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="system" id="Macintosh" value="Macintosh">
+                            <label for="Macintosh">Macintosh</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="system" id="other" value="Other">
+                            <label for="other">Other</label>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr style="background: brown; height: 1px;"/>
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">Comments?:</td>
+            <td>
+                <input type="text" name="comment" id="comment" style="width: 400px; height: 120px;">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button onclick="register()">Click to register</button>
+                <button onclick="cancel()">Click to cancel</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
