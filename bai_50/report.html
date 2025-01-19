@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title>Travel Expense Report</title>
+    <style>
+        button{
+            height: 25px; 
+            padding-inline: 10px; 
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function submitForm(){
+            alert("Đã gửi!")
+        }
+        function resetForm(){
+            document.getElementById("report").reset();
+        }
+    </script>
+</head>
+<body bgcolor="#ccffff">
+    <center><img src="DeLong.jpg"/></center>
+    <h2 style="margin-left: 25px;">Travel Expense Report</h2>
+    <hr style="background: brown; height: 1px;"/>
+    <form id="report">
+    <ol type="1">
+        <li><p>
+            First Name:
+            <input type="text" name="firstname" id="firstname" style="width: 140px;">
+            Last Name:
+            <input type="text" name="lastname" id="lastname" style="width: 140px;">
+        </p></li>
+        <li><p>
+            Social Security Number:
+            <input type="text" name="ssn" id="ssn" style="width: 80px;">
+        </p></li>
+        <li><p>
+            Department
+            <select>
+                <option>Accounting</option>
+            </select>
+        </p></li>
+        <li>
+            Describe the purpose of your trip.
+            <p><input type="text" style="width: 400px; height: 60px;"></p>
+        </li>
+        <li><p>
+            Itemize your travel expenses</p>
+            <table border="1">
+                <tr>
+                    <th style="width: 120;">Date</th>
+                    <th style="width: 300;">Description</th>
+                    <th style="width: 130;">Category</th>
+                    <th style="width: 80;">Amount</th>
+                </tr>
+                <tr>
+                    <td align="center"><input type="date" name="date" id="date" style="width: 100px;"></td>
+                    <td align="center"><input type="text" name="description" id="description" style="width:180px"></td>
+                    <td align="center"><select style="width: 115;"><option>Meal</option></select></td>
+                    <td align="center"><input type="text" name="description" id="description" style="width:50px"></td>
+                </tr>
+                <tr>
+                    <td align="center"><input type="date" name="date" id="date" style="width: 100px;"></td>
+                    <td align="center"><input type="text" name="description" id="description" style="width:180px"></td>
+                    <td align="center"><select style="width: 115;"><option>Meal</option></select></td>
+                    <td align="center"><input type="text" name="description" id="description" style="width:50px"></td>
+                </tr>
+                <tr>
+                    <td align="center"><input type="date" name="date" id="date" style="width: 100px;"></td>
+                    <td align="center"><input type="text" name="description" id="description" style="width:180px"></td>
+                    <td align="center"><select style="width: 115;"><option>Meal</option></select></td>
+                    <td align="center"><input type="text" name="description" id="description" style="width:50px"></td>
+                </tr>
+                <tr>
+                    <td align="center"><input type="date" name="date" id="date" style="width: 100px;"></td>
+                    <td align="center"><input type="text" name="description" id="description" style="width:180px"></td>
+                    <td align="center"><select style="width: 115;"><option>Meal</option></select></td>
+                    <td align="center"><input type="text" name="description" id="description" style="width:50px"></td>
+                </tr>
+            </table>
+        </li>
+        <li><p>
+            Have you submited your receipts?
+            <input type="radio" name="yes" id="yes">
+            <label for="yes">Yes</label>
+            <input type="radio" name="no" id="no">
+            <label for="no">No</label>
+            <p>
+                <button type="button" onclick="submitForm()">Submit travel expenses</button>
+                <button type="button" onclick="resetForm()">Reset</button>
+            </p>
+        </p></li>
+    </ol></form>
+    <p style="margin-left: 25px;">Question? Contact Debbie Larson in Accounting (ext. 2150).</p>
+</body>
+</html>
